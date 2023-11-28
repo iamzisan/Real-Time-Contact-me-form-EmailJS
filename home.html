@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Playpen+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar1">
+        <div class="left">Hello</div>
+        <div class="right">
+          <ul>
+            <li><a style="color:rgb(255, 255, 255);" href="home.html">Home</a></li>
+            <li><a href="index.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstsection">
+        <div class="leftsection">
+          Hi, I am <span class="red">Zisan</span>
+          <div>and I am a Java Developer</div>
+          <div class="edit">I have Skills on <span id="element"></span></div>
+          <div class="homebutton">
+            <a href="https://drive.google.com/file/d/1x0y_ZCrFSamdoH6ry3DKM-O_riABWk8B/view?usp=sharing" class="custom-button">Download CV</a>
+            <a href="https://github.com/iamzisan" class="custom-button">View Github</a>
+        </div>
+        </div>
+        <div class="rightsection">
+          <img src="zisan.png" />
+        </div>
+      </section>
+
+      <section class="secondsection">
+        <span class="text-gray">Experience and </span>
+        <h1>Timeline</h1>
+        <div class="box">
+          <div class="vertical">
+            <img
+              class="image-top"
+              src="kafco.png"
+              href="https://kafcoeducation.org/"
+            />
+            <div class="vertical-title">KAFCO School & College</div>
+            <div class="vertical-desc">High School(2005-2015)</div>
+          </div>
+          <div class="vertical">
+            <img
+              class="image-top"
+              src="cambrian.png"
+              href="https://www.cambrian.edu.bd/"
+            />
+            <div class="vertical-title">Cambrian School & College</div>
+            <div class="vertical-desc">College(2016-2018)</div>
+          </div>
+          <div class="vertical">
+            <img
+              class="image-top"
+              src="aiub.png"
+              href="https://www.aiub.edu/"
+            />
+            <div class="vertical-title">
+              American International University Bangladesh
+            </div>
+            <div class="vertical-desc">
+              I have graduated from American International University Bangladesh
+              in the dept. of Computer Science and Engineering(2019-2023)
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top" src="gao.png" href="https://gaotek.com/" />
+            <div class="vertical-title">GAO Tec Inc.(GAO Group)</div>
+            <div class="vertical-desc">
+              I am Working as a Web Developer Intern at GAO Tec.(2023-Ongoing)
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-second">
+          <ul class="fo">
+            <!-- Add a class 'footer-link' to the list items -->
+            <li>
+              <a
+                class="footer-link1"
+                href="https://www.linkedin.com/in/iamzisan/"
+              >
+                <img class="footer-image" src="linkedin.png" />
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="mailto:ahmed.zisanahmed@gmail.com">
+                <img class="footer-image" src="gmail.png" />
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="https://github.com/iamzisan">
+                <img class="footer-image" src="github.png" />
+              </a>
+            </li>
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.google.com/maps/place/KOTIBARSHA/@23.7404326,90.3813934,18z/data=!4m15!1m8!3m7!1s0x3755bf529efccf5f:0x5cbab1428fe505eb!2s3+Dhanmondi+Bridge,+Dhaka+1209!3b1!8m2!3d23.7511635!4d90.3734989!16s%2Fg%2F11svm6z580!3m5!1s0x3755b93e0b28bafd:0x8e1ec61d29d6b3d1!8m2!3d23.7405156!4d90.3815835!16s%2Fg%2F11fj6qs55r?entry=ttu"
+              >
+                <img class="footer-image" src="location.png" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footerhr" />
+      <div class="footer-rights">
+        | Copyright &copy; or &#169; | All rights reserved |
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+      // Define an array of strings
+      var strings = [
+        "Object Oriented Programming",
+        "Java",
+        "Springboot",
+        "Java Swing",
+        "Hibernate",
+        "javascript",
+        "Python",
+        "Data Science",
+        "Machine Learning",
+        "Human Computer Interaction",
+        "Front-End Development",
+        "Back-End Development",
+        "MySql",
+        "C++",
+        "Data Structure and Algorithms",
+      ];
+
+      // Function to start the Typed.js instance
+      function startTyped() {
+        var typed = new Typed("#element", {
+          strings: strings,
+          typeSpeed: 130,
+          onComplete: function () {
+            // When typing is complete, start the loop again
+            typed.destroy(); // Destroy the current Typed instance
+            setTimeout(startTyped, 1000); // Restart after a delay (1 second in this example)
+          },
+        });
+      }
+
+      // Initial start
+      startTyped();
+    </script>
+  </body>
+</html>
